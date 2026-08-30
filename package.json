@@ -1,0 +1,11 @@
+{
+  "name": "recovery-ledger-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "record-demo": "node scripts/record-demo.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0"
+  }
+}

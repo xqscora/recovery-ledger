@@ -1,0 +1,27 @@
+name: Record Recovery Ledger demo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - run: npm run record-demo
+      - name: Publish public demo asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DEMO=$(find artifacts -name '*.webm' -print -quit)
+          test -n "$DEMO"
+          gh release delete demo-v1 --repo "$GITHUB_REPOSITORY" --yes || true
+          gh release create demo-v1 "$DEMO" --repo "$GITHUB_REPOSITORY" --title "Recovery Ledger demo v1" --notes "Project-specific interaction recording for NextStep Hacks 2026."
