@@ -9,6 +9,10 @@ function dependencyLabel(value) {
   return { none: "No dependency", data: "Needs one data point", approval: "Needs someone else's reply" }[value];
 }
 
+function dependencyAction(value) {
+  return { none: "No external handoff is required.", data: "Start by collecting one clearly named data point.", approval: "Start by drafting the request for the pending reply." }[value];
+}
+
 function render() {
   const timeline = $("timeline");
   $("stateCount").textContent = `${state.entries.length} ${state.entries.length === 1 ? "state" : "states"}`;
@@ -56,7 +60,7 @@ function updateRecovery() {
   const slice = Math.min(available, entry.effort);
   const remaining = Math.max(entry.effort - slice, 0);
   const action = entry.status === "planned" ? `Reserve ${slice} minutes for ${entry.name.toLowerCase()}.` : remaining ? `Do the smallest ${slice}-minute slice of ${entry.name.toLowerCase()}, then reassess.` : `Complete ${entry.name.toLowerCase()} in one focused ${slice}-minute block.`;
-  $("recoveryCard").innerHTML = `<strong>${action}</strong><p>${remaining ? `${remaining} minutes remain after this slice.` : "This constraint leaves a feasible next step."}</p>`;
+  $("recoveryCard").innerHTML = `<strong>${action}</strong><p>${remaining ? `${remaining} minutes remain after this slice.` : "This constraint leaves a feasible next step."} ${dependencyAction(entry.dependency)}</p>`;
   $("assumptionText").textContent = `Available time changed to ${available} minutes; effort and dependency stayed visible. The plan recalculates without judging the missed state.`;
 }
 
