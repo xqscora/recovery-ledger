@@ -7,8 +7,12 @@
   "built_with": ["HTML5", "CSS3", "Vanilla JavaScript", "Browser DOM APIs", "Web Crypto UUID helper"],
   "source_code": "https://github.com/xqscora/recovery-ledger",
   "live_demo": "https://xqscora.github.io/recovery-ledger/",
-  "video_url": "https://github.com/xqscora/recovery-ledger/releases/download/demo-v1/page%40c64df152a11c942d495bf7f87c2683e2.webm",
-  "screenshots": [],
+  "video_url": "https://github.com/xqscora/recovery-ledger/releases/download/demo-v1/page%409d4f29457db18a6976a2cb70fa0f434b.webm",
+  "screenshots": [
+    "https://github.com/xqscora/recovery-ledger/releases/download/demo-v1/recovery-ledger-planned.png",
+    "https://github.com/xqscora/recovery-ledger/releases/download/demo-v1/recovery-ledger-recoverable.png",
+    "https://github.com/xqscora/recovery-ledger/releases/download/demo-v1/recovery-ledger-constrained.png"
+  ],
   "ai_use_disclosure": "AI coding assistance was used for brainstorming, implementation drafting, and debugging. The project owner reviewed the implementation and remains responsible for understanding and explaining the final code.",
   "submission_status": "PUBLIC_REPO_PAGES_AND_VIDEO_LIVE_DEVPOST_PENDING"
 }
