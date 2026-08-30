@@ -24,4 +24,4 @@ jobs:
           DEMO=$(find artifacts -name '*.webm' -print -quit)
           test -n "$DEMO"
           gh release delete demo-v1 --repo "$GITHUB_REPOSITORY" --yes || true
-          gh release create demo-v1 "$DEMO" --repo "$GITHUB_REPOSITORY" --title "Recovery Ledger demo v1" --notes "Project-specific interaction recording for NextStep Hacks 2026."
+          gh release create demo-v1 "$DEMO" artifacts/*.png --repo "$GITHUB_REPOSITORY" --title "Recovery Ledger demo v1" --notes "Project-specific interaction recording and state screenshots for NextStep Hacks 2026."
