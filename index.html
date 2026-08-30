@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recovery Ledger</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">EARTH FORWARD / NEXT STEP HACKS</p>
+        <h1>Recovery Ledger</h1>
+        <p class="lede">A missed commitment is a state transition, not a verdict.</p>
+      </div>
+      <button id="resetBtn" class="quiet" type="button">Reset demo</button>
+    </header>
+
+    <section class="workspace" aria-label="Recovery Ledger workspace">
+      <aside class="panel add-panel">
+        <h2>Add a commitment</h2>
+        <form id="taskForm">
+          <label>Task name<input id="taskName" required value="Submit the recycling audit"></label>
+          <label>Due in hours<input id="dueHours" type="number" min="1" value="6" required></label>
+          <label>Effort (minutes)<input id="effort" type="number" min="5" value="45" required></label>
+          <label>Dependency<select id="dependency"><option value="none">No dependency</option><option value="data">Need one data point</option><option value="approval">Need someone else's reply</option></select></label>
+          <button class="primary" type="submit">Add to ledger</button>
+        </form>
+        <div class="rule-note"><strong>Local-first.</strong> Demo data stays in this browser. No account, upload, or diagnosis is needed.</div>
+      </aside>
+
+      <section class="panel ledger-panel">
+        <div class="section-heading"><div><p class="eyebrow">VISIBLE STATE</p><h2>Commitment timeline</h2></div><span id="stateCount" class="count">0 states</span></div>
+        <div id="timeline" class="timeline" aria-live="polite"></div>
+      </section>
+
+      <aside class="panel recovery-panel">
+        <div class="section-heading"><div><p class="eyebrow">CONSTRAINT TEST</p><h2>Find the next step</h2></div></div>
+        <label class="range-label">Available time <output id="timeOutput">30 min</output><input id="availableTime" type="range" min="10" max="120" step="5" value="30"></label>
+        <div id="recoveryCard" class="recovery-card"></div>
+        <div class="assumptions"><h3>Changed assumption</h3><p id="assumptionText"></p></div>
+        <button id="markMissedBtn" class="secondary" type="button">Mark current task missed</button>
+      </aside>
+    </section>
+
+    <footer><span>Recovery is a plan you can inspect.</span><span>Built with HTML, CSS, and vanilla JavaScript.</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
