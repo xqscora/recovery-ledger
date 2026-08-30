@@ -1,0 +1,14 @@
+{
+  "event": "NextStep Hacks 2026",
+  "project_name": "Recovery Ledger",
+  "tagline": "Turn a missed commitment into the smallest feasible next step.",
+  "description": "Recovery Ledger is a local-first timeline for commitments, slips, and recovery actions. A user can mark a task recoverable, change the available-time constraint, and see a transparent next action while effort and dependencies remain visible.",
+  "theme_fit": "Earth Forward: environmental work often fails when time, data, or coordination assumptions change. Recovery Ledger demonstrates a narrow, inspectable recovery mechanism using a synthetic recycling-audit task.",
+  "built_with": ["HTML5", "CSS3", "Vanilla JavaScript", "Browser DOM APIs", "Web Crypto UUID helper"],
+  "source_code": "https://github.com/xqscora/recovery-ledger",
+  "live_demo": "https://xqscora.github.io/recovery-ledger/",
+  "video_url": "https://github.com/xqscora/recovery-ledger/releases/download/demo-v1/page%40c64df152a11c942d495bf7f87c2683e2.webm",
+  "screenshots": [],
+  "ai_use_disclosure": "AI coding assistance was used for brainstorming, implementation drafting, and debugging. The project owner reviewed the implementation and remains responsible for understanding and explaining the final code.",
+  "submission_status": "PUBLIC_REPO_PAGES_AND_VIDEO_LIVE_DEVPOST_PENDING"
+}
